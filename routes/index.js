@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  res.render('index', { title: request.socket.remoteAddressExpress });
+  res.render('index', { title: req.socket.remoteAddressExpress });
 });
 
 module.exports = router;
