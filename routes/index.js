@@ -1,14 +1,15 @@
 var express = require('express');
-const {parse, stringify, toJSON, fromJSON} = require('flatted');
+
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   
-  var json = stringify(req);
+  var json = JSON.stringify(req.headers);
+  var json2 = JSON.stringify(req.rawHeaders);
   var ip = 1;
-  console.log(json);
-  res.render('index', { title: ip , json : json });
+  console.log(req);
+  res.render('index', { title: ip , json : json, raw : json2 });
 });
 
 module.exports = router;
