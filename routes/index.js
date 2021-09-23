@@ -3,8 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-
-  res.render('index', { title: req.socket.remoteAddressExpress });
+  console.log(req)
+  res.render('index', { title: req.socket.remoteAddress });
 });
 
 module.exports = router;
