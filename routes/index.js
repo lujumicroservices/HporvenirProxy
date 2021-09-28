@@ -13,7 +13,7 @@ router.get('*', function(req, res, next) {
   var json = JSON.stringify(req.headers);
   var json2 = JSON.stringify(req.rawHeaders);
   
-  let ts = Date.now();y
+  let ts = Date.now();
   var ip = req.headers["x-client-ip"];
 
   const enc1 = encrypt(ip + "@" + ts);
