@@ -8,17 +8,17 @@ const iv = crypto.randomBytes(16);
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('*', function(req, res, next) {
   
   var json = JSON.stringify(req.headers);
   var json2 = JSON.stringify(req.rawHeaders);
   
-  let ts = Date.now();
+  let ts = Date.now();y
   var ip = req.headers["x-client-ip"];
 
   const enc1 = encrypt(ip + "@" + ts);
   
-
+  console.log("HBBBBBBBBBBBBB");
   //res.redirect('http://hemerotecaelporvenir.com.mx/');
   res.redirect('/navigation?secret=' + enc1.content + "&iv=" + enc1.iv);
      
