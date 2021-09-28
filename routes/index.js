@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
   
 
   //res.redirect('http://hemerotecaelporvenir.com.mx/');
-  res.redirect('http://hemerotecaelporvenir.com.mx/?secret=' + enc1.content + "&iv=" + enc1.iv);
+  res.redirect('http://hemerotecaelporvenir.com.mx?secret=' + enc1.content + "&iv=" + enc1.iv);
      
     
   
