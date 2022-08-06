@@ -8,7 +8,7 @@ const iv = crypto.randomBytes(16);
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('+', function(req, res, next) {
   
   var json = JSON.stringify(req.headers);
   var json2 = JSON.stringify(req.rawHeaders);
