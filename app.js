@@ -4,8 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -29,7 +27,7 @@ app.get('/navigation', (req, res) => {
 });
 
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   console.log("Hccccccccc");
   console.log(req.query);
   res.sendFile(path.join(__dirname, 'client', 'index.html'));
