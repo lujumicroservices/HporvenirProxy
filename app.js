@@ -29,7 +29,12 @@ app.get('/navigation', (req, res) => {
 });
 
 
-app.use('/', indexRouter);
+app.get('*', (req, res) => {
+  console.log("Hccccccccc");
+  console.log(req.query);
+  res.sendFile(path.join(__dirname, 'client', 'index.html'));
+});
+
 
 
 // catch 404 and forward to error handle
