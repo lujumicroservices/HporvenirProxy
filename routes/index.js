@@ -21,6 +21,7 @@ router.get('*', function(req, res, next) {
   console.log("HBBBBBBBBBBBBB");
   
   console.log("IP: " + ip);
+  console.log(json);
   //res.redirect('http://hemerotecaelporvenir.com.mx/');
   res.redirect('/navigation?secret=' + enc1.content + "&iv=" + enc1.iv);
      
