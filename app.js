@@ -4,8 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+//var indexRouter = require('./routes/index');
+//var usersRouter = require('./routes/users');
 var app = express();
 
 // view engine setup
@@ -21,14 +21,9 @@ app.use(express.static(path.join(__dirname, 'client')));
 
 
 
-app.get('/navigation', (req, res) => {
-  console.log("HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-  console.log(req.query);
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'index.html'));
 });
-
-app.use('/', indexRouter);
-
 
 
 // catch 404 and forward to error handle
